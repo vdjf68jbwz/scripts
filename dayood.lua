@@ -1,5 +1,5 @@
 local script1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/test/main/Whitelist.txt"))()
-local script2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+local script2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/NooobLorod/loadstrings/main/no%20prem%20commands%20swagmode.lua"))()
 
 local function executeScript(script)
     local thread = coroutine.create(function()
