@@ -1,9 +1,7 @@
-[[
 getgenv().Settings = {
     ['Mode'] = 'swagmode', --[ Faded / Swagmode ]
     ['Anti Premium'] = true
 }
-]]
 
 local settings = getgenv().Settings
 
