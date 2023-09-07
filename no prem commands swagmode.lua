@@ -1,5 +1,6 @@
+
 getgenv().Settings = {
-    ['Mode'] = 'swagmode', --[ Faded / Swagmode ]
+    ['Mode'] = 'Swagmode', --[ Faded / Swagmode ]
     ['Anti Premium'] = true
 }
 
@@ -27,6 +28,3 @@ if settings['Anti Premium'] then
     do
         loadstring(game:HttpGet'https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002')()
     end
-else
-    game:FindService'StarterGui':SetCore('SendNotification', {Text = 'Invalid Mode'})
-end
