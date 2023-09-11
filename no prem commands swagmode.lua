@@ -1,6 +1,6 @@
 
 getgenv().Settings = {
-    ['Mode'] = 'Swagmode', --[ Faded / Swagmode ]
+    ['Mode'] = 'Swagmode', 
     ['Anti Premium'] = true
 }
 
