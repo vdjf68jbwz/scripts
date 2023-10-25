@@ -1,6 +1,6 @@
 
     Settings = {
-        Nooblock = {
+        Kalslock = {
         Enabled = true,
         Key = "q",
         showdot = true,
@@ -24,7 +24,7 @@
         Texts = false, 
         TextColor = Color3.new(255, 255, 255),
         TextSize = 35,
-        TextInput = "Noob",
+        TextInput = "skidded",
         Hitbox = true,
         NoBulletDelay = false,
         Autoclicker = false,
@@ -39,7 +39,7 @@
     Parts - / HumanoidRootPart / LowerTorso / UpperTorso / Head 
 ]]
 
-        local SelectedPart = "UpperTorso"
+        local SelectedPart = "HumanoidRootPart"
         local Prediction = true
         local PredictionValue = 0.132
         
@@ -77,14 +77,14 @@
         e.Name = "PP"
         e.Adornee = Adornee
         e.Size = UDim2.new(Size, Size2, Size, Size2)
-        e.AlwaysOnTop = Settings.Nooblock.showdot
+        e.AlwaysOnTop = Settings.Kalslock.showdot
         local a = Instance.new("Frame", e)
-        if Settings.Nooblock.showdot == true then
+        if Settings.Kalslock.showdot == true then
         a.Size = UDim2.new(1, 0, 1, 0)
         else
         a.Size = UDim2.new(0, 0, 0, 0)
         end
-        if Settings.Nooblock.showdot == true then
+        if Settings.Kalslock.showdot == true then
         a.Transparency = 0
         a.BackgroundTransparency = 0
         else
@@ -93,7 +93,7 @@
         end
         a.BackgroundColor3 = Color
         local g = Instance.new("UICorner", a)
-        if Settings.Nooblock.showdot == false then
+        if Settings.Kalslock.showdot == false then
         g.CornerRadius = UDim.new(0, 0)
         else
         g.CornerRadius = UDim.new(1, 1) 
@@ -132,29 +132,29 @@
     spawn(function()
         placemarker.Anchored = true
         placemarker.CanCollide = false
-        if Settings.Nooblock.showdot == true then
+        if Settings.Kalslock.showdot == true then
         placemarker.Size = Vector3.new(11, 11, 11)
         else
         placemarker.Size = Vector3.new(0, 0, 0)
         end
-        if Settings.Nooblock.Hitbox == true then
+        if Settings.Kalslock.Hitbox == true then
         placemarker.Transparency = 0.30
         else
         placemarker.Transparency = 1
         end
-        if Settings.Nooblock.showdot then
+        if Settings.Kalslock.showdot then
         makemarker(placemarker, placemarker, Color3.fromRGB(0, 255, 238), 0.80, 0)
         end
     end)
 
     game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
-        if k == Settings.Nooblock.Key and Settings.Nooblock.Enabled then
+        if k == Settings.Kalslock.Key and Settings.Kalslock.Enabled then
             if enabled == true then
                 enabled = false
-                if Settings.Nooblock.notifaction == true then
+                if Settings.Kalslock.notifaction == true then
                     Plr = getClosestPlayerToCursor()
                 game.StarterGui:SetCore("SendNotification", {
-                    Title = "NoobLock";
+                    Title = "Kal Skidded This";
                     Text = "  Unlocked",
                     Icon = "http://www.roblox.com/asset/?id=5314810647",
                     Duration = 3
@@ -163,11 +163,11 @@
             else
                 Plr = getClosestPlayerToCursor()
                 enabled = true
-                if Settings.Nooblock.notifaction == true then
+                if Settings.Kalslock.notifaction == true then
 
                     game.StarterGui:SetCore("SendNotification", {
-                        Title = "NoobLock";
-                        Text = "  Locked On: "..tostring(Plr.Character.Humanoid.DisplayName),
+                        Title = "Kal Skidded This";
+                        Text = "  Target: "..tostring(Plr.Character.Humanoid.DisplayName),
                         Icon = "http://www.roblox.com/asset/?id=8709610734",
                         Duration = 3
                     })
@@ -181,7 +181,7 @@
 
     function getClosestPlayerToCursor()
         local closestPlayer
-        local shortestDistance = Settings.Nooblock.FOV
+        local shortestDistance = Settings.Kalslock.FOV
 
         for i, v in pairs(game.Players:GetPlayers()) do
             if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") then
@@ -204,33 +204,33 @@
         if enabled and Plr.Character ~= nil and Plr.Character:FindFirstChild("HumanoidRootPart") then
             placemarker.CFrame = CFrame.new(Plr.Character.HumanoidRootPart.Position)
                             local Vector1 = CC:WorldToViewportPoint(Plr.Character.HumanoidRootPart.Position)
-            Line.Color = Settings.Nooblock.TracerColor
-                Line.Transparency = Settings.Nooblock.TracerTransparency
-                Line.Thickness = Settings.Nooblock.TracerThickness
+            Line.Color = Settings.Kalslock.TracerColor
+                Line.Transparency = Settings.Kalslock.TracerTransparency
+                Line.Thickness = Settings.Kalslock.TracerThickness
                 Line.From = Vector2.new(mouse.X, mouse.Y + Inset)
                 Line.To = Vector2.new(Vector1.X, Vector1.Y)
-                Line.Visible = Settings.Nooblock.Tracer
+                Line.Visible = Settings.Kalslock.Tracer
                 Text.Position = Vector2.new(mouse.X, mouse.Y + Inset)
-                Text.Visible = Settings.Nooblock.Texts
+                Text.Visible = Settings.Kalslock.Texts
                 Text.Center = true
                 Text.Outline = true
                 Text.Font = 1
-                Text.Size = Settings.Nooblock.TextSize
-                Text.Color = Settings.Nooblock.TextColor
-                Text.Text = Settings.Nooblock.TextInput
+                Text.Size = Settings.Kalslock.TextSize
+                Text.Color = Settings.Kalslock.TextColor
+                Text.Text = Settings.Kalslock.TextInput
                 Circle.Position = Vector2.new(mouse.X, mouse.Y + Inset)
-                Circle.Visible = Settings.Nooblock.Circles
+                Circle.Visible = Settings.Kalslock.Circles
                 Circle.Thickness = 1.5
-                Circle.Thickness = Settings.Nooblock.CircleThickness
-                Circle.Radius = Settings.Nooblock.CircleFOV
-                Circle.Color = Settings.Nooblock.CircleColor
-                Circle.Filled = Settings.Nooblock.CircleFilled
-                Circle.Transparency = Settings.Nooblock.CircleTransparency
+                Circle.Thickness = Settings.Kalslock.CircleThickness
+                Circle.Radius = Settings.Kalslock.CircleFOV
+                Circle.Color = Settings.Kalslock.CircleColor
+                Circle.Filled = Settings.Kalslock.CircleFilled
+                Circle.Transparency = Settings.Kalslock.CircleTransparency
                 Circle1.Visible = true
-                Circle1.Radius = Settings.Nooblock.CircleTransparencyOutline
+                Circle1.Radius = Settings.Kalslock.CircleTransparencyOutline
                 Circle1.Position = Vector2.new(mouse.X, mouse.Y + Inset)
                 Circle1.Thickness = 5
-                Circle1.Color = Settings.Nooblock.OutlineColor
+                Circle1.Color = Settings.Kalslock.OutlineColor
 
         else
                 Circle.Visible = false
@@ -239,7 +239,7 @@
                 Circle1.Visible = false
             placemarker.CFrame = CFrame.new(0, 9999, 0)
         end
-        if Settings.Nooblock.pingprediction == true then
+        if Settings.Kalslock.pingprediction == true then
              pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
              split = string.split(pingvalue,'(')
              ping = tonumber(split[1])
@@ -272,11 +272,11 @@
     setreadonly(mt, false)
     mt.__namecall = newcclosure(function(...)
         local args = {...}
-        if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" and Settings.Nooblock.Enabled and Plr.Character ~= nil then
+        if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" and Settings.Kalslock.Enabled and Plr.Character ~= nil then
 
             -- args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
             --[[
-            if Settings.Nooblock.airshots == true then
+            if Settings.Kalslock.airshots == true then
                 if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
                     
                     --// Airshot
@@ -306,8 +306,8 @@
     end)
 
     game:GetService("RunService").RenderStepped:Connect(function()
-        if Settings.Nooblock.RESOVLER == true and Plr.Character ~= nil and enabled and Settings.Nooblock.Enabled then
-        if Settings.Nooblock.airshots == true and enabled and Plr.Character ~= nil then
+        if Settings.Kalslock.RESOVLER == true and Plr.Character ~= nil and enabled and Settings.Kalslock.Enabled then
+        if Settings.Kalslock.airshots == true and enabled and Plr.Character ~= nil then
             
         if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
                 
@@ -368,18 +368,18 @@
         end
         end)
 
-        if Settings.Nooblock.NoBulletDelay == true then
+        if Settings.Kalslock.NoBulletDelay == true then
             local FuckDelay = game:GetService("CorePackages").Packages
             FuckDelay:Destroy()
         end
 
-        if Settings.Nooblock.Autoclicker == true then
-            local time = Settings.Nooblock.AutoclickerTime --decrease if too slow increase if too fast
+        if Settings.Kalslock.Autoclicker == true then
+            local time = Settings.Kalslock.AutoclickerTime --decrease if too slow increase if too fast
     
             click = false
             m = game.Players.LocalPlayer:GetMouse()
             m.KeyDown:connect(function(key)
-            if key == Settings.Nooblock.AutoclickerKey then
+            if key == Settings.Kalslock.AutoclickerKey then
             if click == true then click = false
             elseif
             click == false then click = true
