@@ -8,6 +8,8 @@ elseif game.PlaceId == 5289429734 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/vdjf68jbwz/scripts/refs/heads/main/blackhawkesp.lua"))()
 elseif game.PlaceId == 5480112241 then 
   loadstring(game:HttpGet("https://raw.githubusercontent.com/vdjf68jbwz/scripts/refs/heads/main/blackhawkesp.lua"))()
+elseif game.PlaceId == 4524359706 then 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/vdjf68jbwz/scripts/refs/heads/main/blackhawkesp.lua"))()
 elseif game.PlaceId == 4581966615 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 elseif game.PlaceId == 258258996 then
