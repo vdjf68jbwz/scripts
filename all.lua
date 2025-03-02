@@ -1,4 +1,5 @@
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+if game.PlaceId == 9825515356 then 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
   local set = 0.04654492465
   setclipboard(tostring(set))
 elseif game.PlaceId == 292439477 then
